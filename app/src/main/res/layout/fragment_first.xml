@@ -3,14 +3,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FirstFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/label_first"
-        tools:text="@string/label_first" />
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/background" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="40sp"
+        android:text="@string/welcome"
+        tools:text="@string/welcome"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/showView"
+            android:layout_width="541dp"
+            android:layout_height="328dp"
+            android:layout_marginTop="150dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/blank"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:textSize="80sp"
+            tools:text="@string/blank" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="447dp"
+            android:layout_height="225dp"
+            android:layout_marginTop="150dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingStart="48dp"
+            android:paddingEnd="20dp"
+            android:text="@string/day"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="80sp"
+            tools:text="@string/day" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="750dp"
+        android:layout_weight="1"
+        android:text="@string/first_text"
+        android:gravity="center"
+        android:textSize="20sp"
+        tools:text="@string/first_text" />
 
 </FrameLayout>

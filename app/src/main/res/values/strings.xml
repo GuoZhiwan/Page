@@ -6,4 +6,9 @@
     <string name="label_first">First Page</string>
     <string name="label_second">Second Page</string>
     <string name="label_third">Third Page</string>
+    <string name="todo">TODO</string>
+    <string name="welcome">您已经在速记学习了</string>
+    <string name="day">天</string>
+    <string name="blank" />
+    <string name="first_text">学习在于积累</string>
 </resources>

@@ -5,7 +5,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 public class MyPageAdapter extends FragmentPagerAdapter {
-    private String [] title=new String[]{"First","Second","Third"};
     public MyPageAdapter(FragmentManager manager){
         super(manager);
     }
@@ -22,7 +21,14 @@ public class MyPageAdapter extends FragmentPagerAdapter {
 
     }
     public CharSequence getPageTitle(int position) {
-        return title[position];
+        if(position==0){
+            return "首页";
+        }else if(position==1){
+            return "刷词";
+        }else{
+            return "搜词";
+        }
+
     }
     @Override
     public int getCount() {
