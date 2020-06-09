@@ -27,7 +27,7 @@ public class FirstFragment extends Fragment {
     TextView show;
     public String updateDate="";
     public String TAG="FirstFragment";
-    int count=1;
+
 
     public FirstFragment() {
 
@@ -44,6 +44,7 @@ public class FirstFragment extends Fragment {
         //获取sp里的时间
         updateDate=sharedPreferences.getString("update_date","");
         //获取当前时间
+        int count=1;
         Date today= Calendar.getInstance().getTime();
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         final String todayStr=sdf.format(today);
@@ -55,10 +56,10 @@ public class FirstFragment extends Fragment {
 
             SharedPreferences sp = getActivity().getSharedPreferences("myapp", Activity.MODE_PRIVATE);
             SharedPreferences.Editor editor = sp.edit();
+            count++;
             editor.putString("update_date",todayStr);
             editor.putInt("count",count);
             editor.apply();
-            count++;
             Log.i(TAG, "onCreate: count"+count);
 
         }else{
