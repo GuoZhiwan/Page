@@ -12,4 +12,5 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
     }
+
 }

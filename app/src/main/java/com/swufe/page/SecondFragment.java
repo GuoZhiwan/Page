@@ -69,6 +69,7 @@ public class SecondFragment extends Fragment {
     }
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        //四级单词按钮
         Button btn1=getActivity().findViewById(R.id.button1);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,17 +80,18 @@ public class SecondFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        //成绩查询按钮
         Button btn3=getActivity().findViewById(R.id.button3);
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Toast.makeText(getActivity(), "正在打开网页", Toast.LENGTH_SHORT).show();
-                Uri uri = Uri.parse("http://cet.neea.edu.cn/cet/");  //设置要操作的路径
+                Uri uri = Uri.parse("http://cet.neea.edu.cn/cet/");
                 Intent it = new Intent();
-                it.setAction(Intent.ACTION_VIEW);  //设置要操作的Action
-                it.setData(uri); //要设置的数据
-                startActivity(it);   //执行跳转
+                it.setAction(Intent.ACTION_VIEW);
+                it.setData(uri);
+                startActivity(it);
 
             }
         });

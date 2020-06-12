@@ -21,4 +21,7 @@
         \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t教育部考试中心
         \n
         \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2020年5月29日</string>
+    <string name="show_mean">显示单词释义</string>
+    <string name="next">下一个</string>
+    <string name="forget">忘记</string>
 </resources>
