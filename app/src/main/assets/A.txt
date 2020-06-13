@@ -126,7 +126,8 @@ add
 vt. 添加 附加 掺加 增加
 addition	
 n. 加 加法 附加物 增加
-additional	adj. 附加的 追加的 另外的
+additional	
+adj. 附加的 追加的 另外的
 address	
 n. 地址 住址 致词 讲话 演说 谈吐 (处理问题的)技巧 vt. 发表演说 写地址 称呼 对付 ( 图书、文章等)讨论(某主题)
 adequate	
@@ -391,7 +392,8 @@ appointment
 n.任命 约定 约会 预约 委派 官职 设备
 appreciate	
 vt.欣赏 感激 赏识 领会 充分意识 感谢 vi.增值
-approach	n.接近 途径 方法 vt.向...靠近 靠近 接近 动手处理
+approach	
+n.接近 途径 方法 vt.向...靠近 靠近 接近 动手处理
 appropriate	
 adj.适当的 恰当的 相称的 vt.拨出(款项) 占用
 approval	

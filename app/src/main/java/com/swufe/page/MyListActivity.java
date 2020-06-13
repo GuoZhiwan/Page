@@ -67,16 +67,15 @@ public class MyListActivity extends ListActivity implements Runnable{
         Document doc = null;
         try {
                 List<WordItem> wordList = new ArrayList<WordItem>();
-                    Log.i(TAG, "onCreate: 到这里没问题");
-                    doc = Jsoup.connect("https://github.com/GuoZhiwan/Page/blob/master/app/src/main/res/A.html").get();
+                    doc = Jsoup.connect("https://github.com/GuoZhiwan/Page/blob/master/app/src/main/assets/A.txt").get();
                     Elements tables = doc.getElementsByTag("table");
                     Element table0 = tables.get(0);
                     //获取td中的数据
                     Elements tds = table0.getElementsByTag("td");
 
-                    for (int i =49; i < tds.size(); i += 2) {
+                    for (int i =1; i < tds.size(); i += 4) {
                         Element td1 = tds.get(i);
-                        Element td2 = tds.get(i + 1);
+                        Element td2 = tds.get(i + 2);
                         String str1 = td1.text();
                         String val = td2.text();
                         Log.i(TAG, "run: " + td1.text() + "==>" + td2.text());
