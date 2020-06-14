@@ -33,17 +33,19 @@ import java.util.List;
 
 import static android.content.ContentValues.TAG;
 
-public class MyListActivity extends ListActivity implements Runnable{
+public class MyListActivity extends ListActivity implements Runnable,AdapterView.OnItemClickListener {
     String data[]={"wait......"};
     Handler handler;
+    private int count=0;
+    ArrayList words=new ArrayList();
+    ArrayList means=new ArrayList();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final List<String> list1=new ArrayList<String>();
-        for(int i=1;i<100;i++){
-            list1.add("item"+i);
-        }
-
+        SharedPreferences sp=getSharedPreferences("mycount", Context.MODE_PRIVATE);
+        count=sp.getInt("db_count",0);
         final ListAdapter adapter=new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,data);
         setListAdapter(adapter);
         Thread t=new Thread(this);
@@ -59,11 +61,25 @@ public class MyListActivity extends ListActivity implements Runnable{
                 super.handleMessage(msg);
             }
         };
+        getListView().setOnItemClickListener(this);
 
     }
     public void run() {
         List<String> retlist = new ArrayList<String>();
         //获取网络数据，放入list带回到主线程中
+        Log.i(TAG, "run: count:"+count);
+        if(count!=0){
+            WordManager manager = new WordManager(MyListActivity.this);
+            Log.i(TAG, "run: 数据库里有数据");
+            for(WordItem item:manager.listall()){
+                retlist.add(item.getCurWord()+"-->"+item.getCurMean());
+                words.add(item.getCurWord());
+                means.add(item.getCurMean());
+            }
+            Log.i(TAG, "onCreate: words:"+words);
+
+
+        } else {
         Document doc = null;
         try {
                 List<WordItem> wordList = new ArrayList<WordItem>();
@@ -84,16 +100,44 @@ public class MyListActivity extends ListActivity implements Runnable{
                     }
             //把数据写入数据库中
             WordManager manager = new WordManager(MyListActivity.this);
+            manager.deleteAll();
+            Log.i(TAG, "run: 删除所有记录");
+            words.clear();
+            means.clear();
             manager.addAll(wordList);
+            for(WordItem item:manager.listall()){
+                retlist.add(item.getCurWord()+"-->"+item.getCurMean());
+                words.add(item.getCurWord());
+                means.add(item.getCurMean());
+            }
+
             Log.i(TAG, "run: 添加所有记录");
+            count++;
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+            SharedPreferences sp = getSharedPreferences("mycount", Context.MODE_PRIVATE);
+            SharedPreferences.Editor edit = sp.edit();
+            edit.putInt("db_count",count);
+            Log.i(TAG, "run: count:"+count);
+            edit.commit();
         }
         Message msg = handler.obtainMessage(5);
         msg.obj = retlist;
         handler.sendMessage(msg);
     }
 
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent =new Intent(this,Main2Activity.class);
+        Bundle bundle=new Bundle();
+        bundle.putStringArrayList("CURWORDS",words);
+        bundle.putStringArrayList("CURMEANS",means);
+        intent.putExtras(bundle);
+        startActivity(intent);
+        finish();
+    }
 }
 

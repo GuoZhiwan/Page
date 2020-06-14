@@ -1,6 +1,7 @@
 package com.swufe.page;
 
 
+import android.app.Activity;
 import android.app.LauncherActivity;
 import android.app.ListActivity;
 import android.content.Context;
@@ -69,17 +70,33 @@ public class SecondFragment extends Fragment {
     }
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        //四级单词按钮
+        //单词库按钮
         Button btn1=getActivity().findViewById(R.id.button1);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Toast.makeText(getActivity(), "正在打开", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(),Main2Activity.class);
+                Intent intent = new Intent(getActivity(),MyListActivity.class);
+                Toast.makeText(getActivity(), "点击单词就可以开始背啦~~", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });
+        //复习库按钮
+        Button btn2=getActivity().findViewById(R.id.button2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(getActivity(),MyList2Activity.class);
+                Toast.makeText(getActivity(), "点击单词就可以开始背啦~~", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
         //成绩查询按钮
         Button btn3=getActivity().findViewById(R.id.button3);
         btn3.setOnClickListener(new View.OnClickListener() {
@@ -95,5 +112,6 @@ public class SecondFragment extends Fragment {
 
             }
         });
+
     }
 }

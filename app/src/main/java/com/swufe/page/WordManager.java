@@ -26,6 +26,12 @@ public class WordManager {
         db.insert(TBNAME, null, values);
         db.close();
     }
+    public void delete(WordItem item) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        db.delete(TBNAME, null,null);
+        db.close();
+    }
     public void addAll(List<WordItem> list) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         for(WordItem item:list) {

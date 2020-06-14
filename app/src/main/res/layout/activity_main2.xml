@@ -26,7 +26,8 @@
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="-1dp"
+        android:textSize="50sp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="@string/blank" />
 
@@ -37,6 +38,7 @@
         android:layout_below="@+id/main2_show1"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:textSize="40sp"
         android:layout_marginStart="-2dp"
         android:layout_marginTop="85dp"
         android:layout_marginBottom="340dp"
@@ -50,7 +52,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/btn_mean"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -58,7 +60,7 @@
             android:text="@string/show_mean" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/btn_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@android:style/Animation"
@@ -66,7 +68,7 @@
             android:text="@string/next" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/btn_forget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@android:style/Animation"

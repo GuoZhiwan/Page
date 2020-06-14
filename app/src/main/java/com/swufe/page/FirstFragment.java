@@ -27,6 +27,7 @@ public class FirstFragment extends Fragment {
     TextView show;
     public String updateDate="";
     public String TAG="FirstFragment";
+    int count=1;
 
 
     public FirstFragment() {
@@ -44,7 +45,7 @@ public class FirstFragment extends Fragment {
         //获取sp里的时间
         updateDate=sharedPreferences.getString("update_date","");
         //获取当前时间
-        int count=1;
+        count=sharedPreferences.getInt("count",count);
         Date today= Calendar.getInstance().getTime();
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         final String todayStr=sdf.format(today);
