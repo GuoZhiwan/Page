@@ -98,8 +98,8 @@ public class Main2Activity extends AppCompatActivity {
                         SharedPreferences.Editor editor=sp2.edit();
                         editor.putInt("fwordsint",fwords.size());
                         for(int i=0;i<fwords.size();i++){
-                            editor.putString("fwords",fwords.get(i).toString());
-                            editor.putString("fmeans",fmeans.get(i).toString());
+                            editor.putString("fwords"+i,fwords.get(i).toString());
+                            editor.putString("fmeans"+i,fmeans.get(i).toString());
                         }
                         editor.commit();
                     Log.i(TAG, "onClick: length"+fwords.size());
