@@ -88,7 +88,7 @@ public class SecondFragment extends Fragment {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(getActivity(),MyList2Activity.class);
-                Toast.makeText(getActivity(), "点击单词就可以开始背啦~~", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "及时复习才不会忘得太快哦~", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });

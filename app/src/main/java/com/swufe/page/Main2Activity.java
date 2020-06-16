@@ -50,6 +50,7 @@ public class Main2Activity extends AppCompatActivity {
         if(words!=null) {
             showword.setText(words.get(count).toString());
         }
+        //显示释义按钮
         Button btn1 = findViewById(R.id.btn_mean);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +64,7 @@ public class Main2Activity extends AppCompatActivity {
                     showmean.setText("恭喜你，全部单词已经背完~");
             }
         });
+        //下一个按钮，点击显示下一个单词
         Button btn2 = findViewById(R.id.btn_next);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override

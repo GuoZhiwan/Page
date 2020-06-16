@@ -7,6 +7,7 @@
     tools:context=".ThirdFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -14,21 +15,36 @@
         android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
         app:srcCompat="@mipmap/background" />
+
+
     <EditText
         android:id="@+id/edittext"
-        android:layout_width="match_parent"
+        android:layout_width="354dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints=""
+        android:gravity="center"
+        android:theme="@style/MyEditText"
         android:hint="@string/search"
         android:inputType="text"
-        android:autofillHints="" />
-
+        android:paddingStart="65dp"
+        android:paddingEnd="65dp" />
 
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="517dp"
+        android:layout_height="482dp"
         android:layout_gravity="bottom" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/button"
+        android:textSize="15sp" />
 
 
 </FrameLayout>

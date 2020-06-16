@@ -6,8 +6,7 @@
     <string name="label_first">First Page</string>
     <string name="label_second">Second Page</string>
     <string name="label_third">Third Page</string>
-    <string name="todo">TODO</string>
-    <string name="welcome">您已经在速记学习了</string>
+    <string name="welcome">你已经在速记学习了</string>
     <string name="day">天</string>
     <string name="blank" />
     <string name="first_text">学习在于积累</string>
@@ -15,7 +14,7 @@
     <string name="remember">单词库</string>
     <string name="grades">成绩查询</string>
     <string name="second_title">最新通知</string>
-    <string name="text2">\t\t\t\t根据党中央、国务院关于新冠肺炎疫情防控工作的有关精神，经研究决定，
+    <string name="text2">\n\t\t\t\t根据党中央、国务院关于新冠肺炎疫情防控工作的有关精神，经研究决定，
         原定于2020年6月13日举行的全国大学英语四、六级考试延期并分两次举行，考试日期分别为7月11日和9月19日。
         \n\n
         \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t教育部考试中心
@@ -27,4 +26,6 @@
     <string name="menu_set">单词库</string>
     <string name="open_list">复习库</string>
     <string name="search">请输入您想查询的单词</string>
+    <string name="todo">TODO</string>
+    <string name="button">搜索：</string>
 </resources>
