@@ -27,7 +27,7 @@ public class FirstFragment extends Fragment {
     TextView show;
     public String updateDate="";
     public String TAG="FirstFragment";
-    int count=1;
+    int count=0;
 
 
     public FirstFragment() {

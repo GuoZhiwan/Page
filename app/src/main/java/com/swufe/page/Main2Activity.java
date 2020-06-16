@@ -82,6 +82,7 @@ public class Main2Activity extends AppCompatActivity {
                 editor.apply();
             }
         });
+        //忘记按钮，利用SharedPreferences将单词传到复习库，在MyList2Activity中获取
         Button btn3 = findViewById(R.id.btn_forget);
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
